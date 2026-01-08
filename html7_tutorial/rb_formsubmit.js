@@ -1,0 +1,31 @@
+/*
+   JavaScript submit form script for Red Ball Pizza Page
+
+   Author: Stephanie DeMola
+   Date: 01/05/2026
+
+
+   Filename: rb_formsubmit.js
+
+   Purpose: The purpose of this program is to simply report on a
+            successful completition of a valid Web form.
+
+            When the form is submitted, the onsubmit event handler
+            verifies that the form data is complete and valid.
+            An alert box is displayed notifying the user.
+
+            The event function returns a value of false so that the
+            student does not have to continually retype test values
+            in the survey form.
+
+
+*/
+
+window.onload = setForm;
+
+   function setForm() {
+   document.forms[0].onsubmit = function() {
+      if (this.checkValidity()) alert("Form successfully submitted.\n\nThank You For Dining With RedBall Pizza!");
+      return false;
+   }
+}
